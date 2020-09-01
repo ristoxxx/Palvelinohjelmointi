@@ -20,8 +20,8 @@ public class requestController {
 	@RequestMapping(value="hello", method = RequestMethod.GET)
 //	public @ResponseBody String x(@RequestParam("location") String itemid){
 
-	public String hello(@RequestParam("location") String location){
-		return "This page " + location;
+	public String hello(@RequestParam("location") String location, @RequestParam("name") String name){
+		return "Welcome to the " + location +" " + name +"!";
 	}
 //	    Item i = itemDao.findOne(itemid);              
 //	    String itemName = i.getItemName();
