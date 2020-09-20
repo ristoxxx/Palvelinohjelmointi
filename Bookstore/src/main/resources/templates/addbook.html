@@ -27,6 +27,11 @@
 		  	<label for="year">Year</label>
 			<input type="text" th:field="*{year}" />
 			
+			<div style="clear: both; display: block; height: 10px;"></div>						
+		  	<label for="clist">Category</label>
+			 <select id="clist" th:field="*{category}" class="form-control">
+       			<option th:each="category: ${categorys}" th:value="${category.categoryid}" th:text="${category.name}"></option>
+    		</select>
 			
 			
 			<div style="clear: both; display: block; height: 10px;"></div>
