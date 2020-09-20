@@ -4,13 +4,17 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
+import com.example.Bookstore.domain.Category;
 
 @Entity
 public class Book {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
-    private Long id;
-    private String firstName;
+	private Long id;
+	private String firstName;
     private String lastName;
     private String title;
     private String isbn;
@@ -27,6 +31,7 @@ public class Book {
 		this.year = year;
 	}
 
+	 
 	public Long getId() {
 		return id;
 	}
@@ -80,4 +85,3 @@ public class Book {
 		return "Book [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", title=" + title + ", isbn" + isbn + ", year" + year +  "]";
 	}
 }
-
