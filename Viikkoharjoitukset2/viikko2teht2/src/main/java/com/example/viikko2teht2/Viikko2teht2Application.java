@@ -11,5 +11,4 @@ public class Viikko2teht2Application {
 		SpringApplication.run(Viikko2teht2Application.class, args);
 		
 	}
-
 }
