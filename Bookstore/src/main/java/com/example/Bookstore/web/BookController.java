@@ -17,8 +17,6 @@ import com.example.Bookstore.domain.BookRepository;
 //import com.example.Bookstore.domain.Category;
 import com.example.Bookstore.domain.CategoryRepository;
 
-
-
 @Controller
 public class BookController {
 	@Autowired
@@ -50,11 +48,10 @@ public class BookController {
     	return repository.findById(id);
     } 
     
-    @PreAuthorize("hasAuthority('ADMIN')")
     @RequestMapping(value = "/add")
     public String addStudent(Model model){
     	model.addAttribute("book", new Book());
-    	model.addAttribute("departments", crepository.findAll());
+    	model.addAttribute("categorys", crepository.findAll());
         return "addbook";
     }
     
