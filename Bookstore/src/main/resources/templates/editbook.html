@@ -9,11 +9,11 @@
 	<div>
 		<form th:object="${book}" th:action="@{../save}" action="#" method="post">
 			<input type="hidden" id="id" th:field="*{id}" />
-		  	<label for="fname">Firstname</label>
+		  	<label for="fname">First name</label>
 			<input type="text" id="fname" th:field="*{firstName}" />
 			
 			<div style="clear: both; display: block; height: 10px;"></div>
-		  	<label for="lname">Lastname</label>
+		  	<label for="lname">Last name</label>
 			<input type="text" id="lname" th:field="*{lastName}" />
 			
 			<div style="clear: both; display: block; height: 10px;"></div>
@@ -28,6 +28,9 @@
 		  	<label for="year">Year</label>
 			<input type="text" th:field="*{year}" />
 			
+			<div style="clear: both; display: block; height: 10px;"></div>
+		  	<label for="category"></label>
+			<input type="hidden" th:field="*{category.categoryid}" />
 					
 			<div style="clear: both; display: block; height: 10px;"></div>
 			<input type="submit" value="Save"></input>

@@ -7,8 +7,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.FetchType;
 
-import com.example.Bookstore.domain.Book;
+//import com.example.Bookstore.domain.Book;
 
 @Entity
 public class Category {
