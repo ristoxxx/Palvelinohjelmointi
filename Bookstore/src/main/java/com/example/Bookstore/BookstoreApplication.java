@@ -38,7 +38,6 @@ public class BookstoreApplication {
 			urepository.save(user1);
 			urepository.save(user2);
 			
-			
 		};
 	}
 
